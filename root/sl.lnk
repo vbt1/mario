@@ -1,0 +1,32 @@
+SECTIONS {		
+
+	.text	0x06004000:
+	{
+		*(.text)
+		*(.strings)
+	}
+
+			
+	.tors  ALIGN(0x10) :			
+	{			
+		___ctors = . ;			
+		*(.ctors)			
+		___ctors_end = . ;			
+		___dtors = . ;			
+		*(.dtors)			
+		___dtors_end = . ;			
+	}			
+	.data ALIGN(0x10):			
+	{			
+		* (.data)			
+		_edata = . ;			
+	}			
+	.bss ALIGN(0x10) (NOLOAD):			
+	{			
+		__bstart = . ;			
+		*(.bss)			
+		* ( COMMON )			
+		__bend = . ;			
+	_end = .;			
+	}			
+}					

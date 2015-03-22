@@ -1,0 +1,45 @@
+# source_program
+  SRCS =    saturn/saturn.c \
+            saturn/font.c \
+            saturn/menu.c \
+            saturn/control.c \
+            saturn/file.c \
+            saturn/cd_ctrl.c \
+            smb.c
+
+
+
+#            saturn/font.c \
+#            saturn/file.c \
+#            saturn/slave.c         
+#SRCS = saturn/saturn.c saturn/file.c 
+
+OBJS = l:/saturn/dev/multib~1/tst/strt1_g.o l:/saturn/dev/multib~1/tst/strt2_g.o  $(SRCS:.c=.o)  
+LIBS =	L:/GNUSH6/sh-coff/sh-coff/lib/m2/libc.a \
+L:/GNUSH6/sh-coff/sh-coff/lib/m2/libm.a \
+L:/GNUSH6/sh-coff/sh-coff/lib/m2/atexit.o \
+L:/GNUSH6/sh-coff/sh-coff/lib/m2/memcmp.o \
+L:/GNUSH6/sh-coff/sh-coff/lib/m2/strncpy.o \
+L:/GNUSH6/sh-coff/sh-coff/lib/m2/strncmp.o \
+L:/GNUSH6/sh-coff/sh-coff/lib/m2/errno.o \
+l:/saturn/SBL6/SEGALIB/LIB/sega_scl.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_mth.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_spr.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_gfs.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_cdc.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_dma.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_csh.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_sys.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_snd.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_pcm.a \
+     l:/saturn/SBL6/SEGASMP/PER/SMPCLIB/coff/per_x1.o \
+     l:/saturn/SBL6/SEGASMP/PER/SMPCLIB/coff/per_x2.o \
+l:/saturn/SBL6/SEGALIB/LIB/sega_per.a \
+l:/saturn/SBL6/SEGALIB/LIB/sega_int.a 
+#/saturn/dev/SATURN/LIB/libsgl.a 
+
+#l:/saturn/dev/saturn/lib/LIBVBLAN.a \
+#l:/saturn/SBL6/SEGALIB/LIB/sega_per.a \
+#/saturn/SBL6/SEGALIB/LIB/sega_gfs.a \
+#/saturn/SBL6/SEGALIB/LIB/sega_dbg.a \
+#/saturn/SBL6/SEGALIB/LIB/sega_cdc.a \
